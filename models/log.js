@@ -2,6 +2,7 @@ const { Schema, SchemaTypes } = require('mongoose')
 const timestamps = require('mongoose-timestamp')
 
 const LogSchema = new Schema({
+  key: { type: String, required: true, unique: true },
   url: { type: String, required: true, unique: true },
   players: [{type: SchemaTypes.ObjectId, ref: 'Script'}], 
   index: {type: String, required: true, index: true}
