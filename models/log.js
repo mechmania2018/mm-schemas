@@ -3,7 +3,8 @@ const timestamps = require('mongoose-timestamp')
 
 const LogSchema = new Schema({
   url: { type: String, required: true, unique: true },
-  players: [{type: SchemaTypes.ObjectId, ref: 'Script'}]
+  players: [{type: SchemaTypes.ObjectId, ref: 'Script'}], 
+  index: {type: String, required: true, index: true}
 })
 
 LogSchema.plugin(timestamps)
