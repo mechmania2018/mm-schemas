@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
-const { Team } = require('../')
+const { Team } = require('../')(mongoose)
 
 mongoose.connect(process.env.MONGO_URL)
 mongoose.Promise = Promise
 
 const test = new Team({
-  name: 'Asaf'
+  name: 'Admin',
+  admin: true
 })
 
 test.save()
