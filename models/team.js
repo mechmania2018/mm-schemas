@@ -1,11 +1,13 @@
 const { Schema, SchemaTypes } = require('mongoose')
-const uuid = require('node-uuid')
+const { isEmail } = require('validator');
+const uuid = require('uuid/v4')
 
 const TeamSchema = new Schema({
   name: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true, validate: [ isEmail, 'Invalid Email' ] },
   latestScript: { type: SchemaTypes.ObjectId, ref: 'Script' },
   admin: { type: Boolean, default: false },
-  token: { type: String, default: uuid.v4(), index: true }
+  token: { type: String, default: uuid(), index: true }
 })
 
 TeamSchema.methods.canBeAccessedBy = function(team) {

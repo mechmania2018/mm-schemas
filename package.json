@@ -4,7 +4,8 @@
   "dependencies": {
     "mongoose": "^5.0.7",
     "mongoose-timestamp": "^0.6.0",
-    "node-uuid": "^1.4.8"
+    "uuid": "^3.2.1",
+    "validator": "^9.4.1"
   },
   "main": "index.js"
 }
