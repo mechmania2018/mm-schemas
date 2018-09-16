@@ -6,6 +6,7 @@ mongoose.Promise = Promise
 
 const test = new Team({
   name: 'Admin',
+  email: 'pranay.gp@gmail.com',
   admin: true
 })
 
