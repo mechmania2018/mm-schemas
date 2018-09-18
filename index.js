@@ -7,5 +7,5 @@ module.exports = mongoose => ({
   Team: Team(mongoose),
   Script: Script(mongoose),
   Log: Log(mongoose),
-  Match: Task(mongoose),
+  Match: Match(mongoose),
 })
