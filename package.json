@@ -1,6 +1,6 @@
 {
   "name": "mm-schemas",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "cuid": "2.1.4",
     "mongoose": "5.0.7",
