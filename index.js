@@ -1,11 +1,11 @@
 const Team = require('./models/team')
 const Script = require('./models/script')
 const Log = require('./models/log')
-const Task = require('./models/task')
+const Match = require('./models/match')
 
 module.exports = mongoose => ({
   Team: Team(mongoose),
   Script: Script(mongoose),
   Log: Log(mongoose),
-  Task: Task(mongoose),
+  Match: Task(mongoose),
 })
